@@ -1,6 +1,6 @@
 # Audiogravity — Releases
 
-Official release binaries and bootstrap installers for [Audiogravity](https://github.com/ad5030/audiogravity).
+Official release binaries and bootstrap installers for Audiogravi<sup>ty</sup>   .
 
 ## Install Backend
 
