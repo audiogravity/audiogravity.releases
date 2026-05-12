@@ -45,8 +45,13 @@
     /* Keep inv-bg elements dark instead of flipping to white */
     :root:not([data-theme="light"]) .fb.dark,
     :root:not([data-theme="light"]) .pricing-plan.featured,
+    :root:not([data-theme="light"]) .np-strip,
+    :root:not([data-theme="light"]) .marquee-bar,
+    :root:not([data-theme="light"]) .rt-config,
+    :root:not([data-theme="light"]) .pwa-visual,
+    :root:not([data-theme="light"]) .terminal,
     :root:not([data-theme="light"]) footer { background: #1a1a1a }
-    :root:not([data-theme="light"]) .fb.dark .fb-tier.pro { border-color: #fff; color: #fff }
+    :root:not([data-theme="light"]) .fb-tier.pro { border-color: #fff; color: #fff }
     :root:not([data-theme="light"]) .pricing-plan.featured { color: #fff }
     :root:not([data-theme="light"]) .pricing-plan.featured .pp-cta { background: #fff; color: #000; border-color: #fff }
     :root:not([data-theme="light"]) .pricing-plan.featured .pp-cta:hover { background: transparent; color: #fff }
@@ -72,8 +77,13 @@
 [data-theme="dark"] .ios .tile .st.down .d { background: #333 }
 [data-theme="dark"] .fb.dark,
 [data-theme="dark"] .pricing-plan.featured,
+[data-theme="dark"] .np-strip,
+[data-theme="dark"] .marquee-bar,
+[data-theme="dark"] .rt-config,
+[data-theme="dark"] .pwa-visual,
+[data-theme="dark"] .terminal,
 [data-theme="dark"] footer { background: #1a1a1a }
-[data-theme="dark"] .fb.dark .fb-tier.pro { border-color: #fff; color: #fff }
+[data-theme="dark"] .fb-tier.pro { border-color: #fff; color: #fff }
 [data-theme="dark"] .pricing-plan.featured { color: #fff }
 [data-theme="dark"] .pricing-plan.featured .pp-cta { background: #fff; color: #000; border-color: #fff }
 [data-theme="dark"] .pricing-plan.featured .pp-cta:hover { background: transparent; color: #fff }
