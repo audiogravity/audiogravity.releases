@@ -5,13 +5,13 @@ Official release binaries and bootstrap installer for the [Audiogravity](https:/
 ## Install
 
 ```bash
-curl -fsSL https://github.com/AD/audiogravity-releases/releases/latest/download/install.sh | sudo bash
+curl -fsSL https://github.com/ad5030/audiogravity-releases/releases/latest/download/install.sh | sudo bash
 ```
 
 ### Install a specific version
 
 ```bash
-curl -fsSL https://github.com/AD/audiogravity-releases/releases/latest/download/install.sh | sudo bash -s -- --version 1.2.0
+curl -fsSL https://github.com/ad5030/audiogravity-releases/releases/latest/download/install.sh | sudo bash -s -- --version 1.2.0
 ```
 
 ## Uninstall

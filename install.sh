@@ -2,12 +2,12 @@
 # Audiogravity Backend — Bootstrap Installer
 #
 # Usage:
-#   curl -fsSL https://github.com/AD/audiogravity-releases/releases/latest/download/install.sh | sudo bash
-#   curl -fsSL https://github.com/AD/audiogravity-releases/releases/latest/download/install.sh | sudo bash -s -- --version 1.2.0
+#   curl -fsSL https://github.com/ad5030/audiogravity-releases/releases/latest/download/install.sh | sudo bash
+#   curl -fsSL https://github.com/ad5030/audiogravity-releases/releases/latest/download/install.sh | sudo bash -s -- --version 1.2.0
 
 set -e
 
-REPO="AD/audiogravity-releases"
+REPO="ad5030/audiogravity-releases"
 INSTALL_DIR="/tmp/ag-install-$$"
 
 GREEN='\033[0;32m'; RED='\033[0;31m'; BLUE='\033[0;34m'; YELLOW='\033[1;33m'; NC='\033[0m'
