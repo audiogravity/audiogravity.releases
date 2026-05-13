@@ -3,56 +3,19 @@
     document.addEventListener('DOMContentLoaded', function () {
         const imgs = document.querySelectorAll('.hero-screenshot');
         const dots = document.querySelectorAll('.hero-dots .dot');
-        const btnPrev = document.getElementById('heroPrev');
-        const btnPlay = document.getElementById('heroPlay');
-        const btnNext = document.getElementById('heroNext');
-        const playIcon = document.getElementById('heroPlayIcon');
         if (!imgs.length) return;
-
-        const PAUSE_SVG = '<rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/>';
-        const PLAY_SVG  = '<polygon points="5 3 19 12 5 21 5 3"/>';
-
         let cur = 0;
-        let playing = true;
-        let timer = null;
 
         function show(n) {
             imgs[cur].classList.remove('active');
             dots[cur] && dots[cur].classList.remove('active');
-            cur = (n + imgs.length) % imgs.length;
+            cur = n % imgs.length;
             imgs[cur].classList.add('active');
             dots[cur] && dots[cur].classList.add('active');
         }
 
-        function startTimer() {
-            clearInterval(timer);
-            timer = setInterval(function () { show(cur + 1); }, 3500);
-        }
-
-        function pause() {
-            playing = false;
-            clearInterval(timer);
-            if (playIcon) playIcon.innerHTML = PLAY_SVG;
-        }
-
-        function play() {
-            playing = true;
-            startTimer();
-            if (playIcon) playIcon.innerHTML = PAUSE_SVG;
-        }
-
-        dots.forEach(function (dot, i) {
-            dot.addEventListener('click', function () { show(i); });
-        });
-
-        if (btnPrev) btnPrev.addEventListener('click', function () { show(cur - 1); if (playing) startTimer(); });
-        if (btnNext) btnNext.addEventListener('click', function () { show(cur + 1); if (playing) startTimer(); });
-
-        if (btnPlay) btnPlay.addEventListener('click', function () {
-            playing ? pause() : play();
-        });
-
-        startTimer();
+        dots.forEach(function (dot, i) { dot.addEventListener('click', function () { show(i); }); });
+        setInterval(function () { show(cur + 1); }, 3500);
     });
 })();
 
