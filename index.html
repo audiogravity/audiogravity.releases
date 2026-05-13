@@ -90,115 +90,25 @@
         </div>
 
         <div class="hero-right">
-            <div class="ios">
-                <div class="island"></div>
-                <div class="home-ind"></div>
-                <div class="scr">
-                    <div class="stbar">
-                        <span>9:41</span>
-                        <div class="icons">
-                            <svg width="14" height="10" viewBox="0 0 14 10" fill="currentColor">
-                                <rect x="0" y="6" width="2.5" height="4" />
-                                <rect x="3.5" y="4" width="2.5" height="6" />
-                                <rect x="7" y="2" width="2.5" height="8" />
-                                <rect x="10.5" y="0" width="2.5" height="10" />
-                            </svg>
-                            <svg width="14" height="10" viewBox="0 0 14 10" fill="currentColor">
-                                <path
-                                    d="M7 2.5c1.5 0 2.9.6 4 1.6L12 3c-1.4-1.3-3.1-2-5-2S3.4 1.7 2 3l1 1.1C4.1 3.1 5.5 2.5 7 2.5zm0 3c.8 0 1.5.3 2 .8l1-1.1c-.8-.7-1.9-1.2-3-1.2s-2.2.5-3 1.2l1 1.1c.5-.5 1.2-.8 2-.8zm0 1.5c-.6 0-1.1.5-1.1 1.1S6.4 9.2 7 9.2s1.1-.5 1.1-1.1S7.6 7 7 7z" />
-                            </svg>
-                            <svg width="22" height="10" viewBox="0 0 22 10" fill="none">
-                                <rect x="0.5" y="0.5" width="18" height="9" rx="2" stroke="currentColor" opacity=".4" />
-                                <rect x="2" y="2" width="13" height="6" rx="1" fill="currentColor" />
-                                <rect x="19.5" y="3" width="1.5" height="4" rx=".5" fill="currentColor" opacity=".4" />
-                            </svg>
-                        </div>
-                    </div>
-                    <div class="tbar">
-                        <h2>Services</h2>
-                        <span class="live">Live SSE</span>
-                    </div>
-                    <div class="body">
-                        <div class="filt">
-                            <span class="pill on">All</span>
-                            <span class="pill">Running</span>
-                            <span class="pill">Critical</span>
-                            <span class="pill">RT</span>
-                        </div>
-                        <div class="tiles">
-                            <div class="tile active">
-                                <div class="hd">
-                                    <div>
-                                        <div class="n">HQPlayer NAA</div>
-                                        <div class="u">networkaudiod.service</div>
-                                    </div>
-                                    <div class="st up"><span class="d"></span>UP</div>
-                                </div>
-                                <div class="mt"><span>CPU</span><b>18.4 %</b></div>
-                                <div class="mt"><span>Mem</span><b>72 MB</b></div>
-                                <svg class="spk" id="ds1" viewBox="0 0 200 16" preserveAspectRatio="none"></svg>
-                                <div class="ft">
-                                    <span class="bdg ok">DSD256</span>
-                                    <span class="bdg ok">RT 80</span>
-                                </div>
-                            </div>
-                            <div class="tile">
-                                <div class="hd">
-                                    <div>
-                                        <div class="n">MPD</div>
-                                        <div class="u">mpd.service</div>
-                                    </div>
-                                    <div class="st up"><span class="d"></span>UP</div>
-                                </div>
-                                <div class="mt"><span>CPU</span><b>0.6 %</b></div>
-                                <svg class="spk" id="ds2" viewBox="0 0 200 16" preserveAspectRatio="none"></svg>
-                                <div class="ft">
-                                    <span class="bdg dim">hw:0,0</span>
-                                    <span class="bdg ok">FIFO</span>
-                                </div>
-                            </div>
-                            <div class="tile down">
-                                <div class="hd">
-                                    <div>
-                                        <div class="n">Roon Bridge</div>
-                                        <div class="u">roonbridge.service</div>
-                                    </div>
-                                    <div class="st down"><span class="d"></span>DOWN</div>
-                                </div>
-                                <div class="ft">
-                                    <span class="bdg warn">CONFLICT</span>
-                                    <span class="bdg dim">stopped</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="np">
-                            <div class="cv"></div>
-                            <div class="col">
-                                <div class="t">Sirens, pt. ii</div>
-                                <div class="a">Nicolas Jaar · A.A.L.</div>
-                            </div>
-                            <div class="fmt">DSD256</div>
-                        </div>
-                        <div class="tab">
-                            <div class="it"><svg viewBox="0 0 20 20">
-                                    <path d="M3 4h14M3 9h14M3 14h14" />
-                                </svg>Browse</div>
-                            <div class="it"><svg viewBox="0 0 20 20">
-                                    <circle cx="8" cy="8" r="5" />
-                                    <path d="m12 12 4 4" />
-                                </svg>Search</div>
-                            <div class="it on"><svg viewBox="0 0 20 20">
-                                    <rect x="3" y="3" width="6" height="6" />
-                                    <rect x="11" y="3" width="6" height="6" />
-                                    <rect x="3" y="11" width="6" height="6" />
-                                    <rect x="11" y="11" width="6" height="6" />
-                                </svg>Services</div>
-                            <div class="it"><svg viewBox="0 0 20 20">
-                                    <polyline points="2,15 6,9 10,12 14,5 18,8" />
-                                </svg>System</div>
-                        </div>
-                    </div>
-                </div>
+            <div class="hero-carousel">
+                <img src="assets/pics/ag-services.webp"         alt="Services"    class="hero-screenshot active">
+                <img src="assets/pics/ag-player.webp"           alt="Player"      class="hero-screenshot">
+                <img src="assets/pics/ag-library.webp"          alt="Library"     class="hero-screenshot">
+                <img src="assets/pics/ag-profiles.webp"         alt="Profiles"    class="hero-screenshot">
+                <img src="assets/pics/ag-settings.webp"         alt="Settings"    class="hero-screenshot">
+                <img src="assets/pics/ag-performence-black.webp" alt="Performance" class="hero-screenshot">
+                <img src="assets/pics/ag-player-black.webp"     alt="Player dark" class="hero-screenshot">
+                <img src="assets/pics/ag-profiles-back.webp"    alt="Profiles dark" class="hero-screenshot">
+            </div>
+            <div class="hero-dots">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
             </div>
         </div>
     </section>
@@ -632,36 +542,7 @@
                 </div>
 
                 <div class="pwa-visual">
-                    <div class="pwa-phone">
-                        <div class="island"></div>
-                        <div class="scr">
-                            <div class="row1"><span>9:41</span><span>● ●●</span></div>
-                            <div class="h">Audiogravi<sup style="font-size:.45em;vertical-align:super">ty</sup></div>
-                            <div class="d">Streamer · online</div>
-                            <div class="face">
-                                <svg viewBox="0 0 60 60">
-                                    <rect x="6" y="6" width="48" height="48" rx="3" />
-                                    <circle cx="22" cy="24" r="2.5" fill="currentColor" />
-                                    <circle cx="38" cy="24" r="2.5" fill="currentColor" />
-                                    <path d="M22 38 Q30 44 38 38" />
-                                    <path d="M12 12v-4M48 12v-4M12 48v4M48 48v4" />
-                                </svg>
-                                <span class="lbl">Face ID</span>
-                                <span class="sub">to unlock</span>
-                            </div>
-                            <div class="toast">
-                                <svg viewBox="0 0 20 20">
-                                    <circle cx="10" cy="10" r="8" />
-                                    <line x1="10" y1="6" x2="10" y2="11" />
-                                    <circle cx="10" cy="14" r=".5" fill="currentColor" />
-                                </svg>
-                                <div>
-                                    <div class="t">Roon Bridge stopped</div>
-                                    <div class="ts">2 s ago · streamer</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <img src="assets/pics/ag-login.webp" alt="Audiogravity — Passkey login" class="pwa-screenshot">
                 </div>
             </div>
         </div>
@@ -846,14 +727,6 @@
                     <div class="faq-body"><div class="faq-body-inner">All v1.x updates are included with the Pro license. Pro holders receive a preferential upgrade price for future major versions.</div></div>
                 </div>
 
-                <div class="faq-item">
-                    <input type="checkbox" id="faq7">
-                    <label class="faq-label" for="faq7">
-                        Is it open source?
-                        <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
-                    </label>
-                    <div class="faq-body"><div class="faq-body-inner">No. Audiogravity is proprietary software distributed under a commercial license. The source code is not published. See the <a href="https://github.com/ad5030/audiogravity-releases/blob/main/EULA.md" style="color:var(--warn)">EULA</a> for full terms.</div></div>
-                </div>
 
             </div>
         </div>

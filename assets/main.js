@@ -1,3 +1,24 @@
+// Hero carousel
+(function () {
+    document.addEventListener('DOMContentLoaded', function () {
+        const imgs = document.querySelectorAll('.hero-screenshot');
+        const dots = document.querySelectorAll('.hero-dots .dot');
+        if (!imgs.length) return;
+        let cur = 0;
+
+        function show(n) {
+            imgs[cur].classList.remove('active');
+            dots[cur] && dots[cur].classList.remove('active');
+            cur = n % imgs.length;
+            imgs[cur].classList.add('active');
+            dots[cur] && dots[cur].classList.add('active');
+        }
+
+        dots.forEach(function (dot, i) { dot.addEventListener('click', function () { show(i); }); });
+        setInterval(function () { show(cur + 1); }, 3500);
+    });
+})();
+
 // Sparklines
 function spark(id, seed) {
     const el = document.getElementById(id); if (!el) return;
