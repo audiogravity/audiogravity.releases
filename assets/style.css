@@ -459,7 +459,8 @@ nav {
     inset: 0;
     background-image: linear-gradient(var(--border) 1px, transparent 1px), linear-gradient(90deg, var(--border) 1px, transparent 1px);
     background-size: 32px 32px;
-    opacity: .5
+    opacity: .5;
+    pointer-events: none
 }
 
 .ios {
@@ -2327,3 +2328,48 @@ footer {
     margin: 0 auto;
     filter: drop-shadow(0 24px 48px rgba(0,0,0,.16));
 }
+
+/* Hero carousel controls */
+.hero-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin-top: 12px;
+}
+
+.hero-ctrl {
+    width: 32px;
+    height: 32px;
+    border: 1px solid var(--border);
+    border-radius: 50%;
+    background: transparent;
+    color: var(--text);
+    cursor: pointer;
+    transition: background var(--ease), border-color var(--ease);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+
+.hero-ctrl:hover {
+    background: var(--bg2);
+    border-color: var(--text);
+}
+
+.hero-ctrl svg {
+    width: 14px;
+    height: 14px;
+    stroke: currentColor;
+    fill: none;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.hero-ctrl .ic-pause rect,
+.hero-ctrl .ic-play polygon { fill: currentColor; stroke: none; }
+.hero-ctrl .ic-play { display: none; }
+#heroPlay.paused .ic-pause { display: none; }
+#heroPlay.paused .ic-play { display: inline; }

@@ -6,15 +6,15 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Audiogravity — Your audio chain, fully controlled</title>
     <meta name="description"
-        content="Professional dashboard for demanding audiophiles on Linux. Orchestrate MPD, Roon, HQPlayer, AirPlay, UPnP from a single browser interface. Real-time signal path, RT scheduling, bit-perfect playback.">
+        content="Your streamer is your source. Audiogravity is the conductor. MPD, Roon, HQPlayer, AirPlay, UPnP — every player, every source, down to DSD and Hi-Res PCM. One interface. Total control.">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Audiogravity">
     <meta property="og:title" content="Audiogravity — Your audio chain, fully controlled">
-    <meta property="og:description" content="Professional dashboard for demanding audiophiles. Orchestrate MPD, Roon, HQPlayer, AirPlay, UPnP from a single browser interface. RT scheduling, bit-perfect playback.">
+    <meta property="og:description" content="Your streamer is your source. Audiogravity is the conductor. MPD, Roon, HQPlayer, AirPlay, UPnP — every player, every source, down to DSD and Hi-Res PCM. One interface. Total control.">
     <meta property="og:image" content="assets/og-image.svg">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Audiogravity — Your audio chain, fully controlled">
-    <meta name="twitter:description" content="Professional dashboard for demanding audiophiles. Orchestrate MPD, Roon, HQPlayer, AirPlay, UPnP from a single browser interface. RT scheduling, bit-perfect playback.">
+    <meta name="twitter:description" content="Your streamer is your source. Audiogravity is the conductor. MPD, Roon, HQPlayer, AirPlay, UPnP — every player, every source, down to DSD and Hi-Res PCM. One interface. Total control.">
     <meta name="twitter:image" content="assets/og-image.svg">
     <link rel="icon" href="pwa/icon-32.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -61,14 +61,14 @@
     <section class="hero">
         <div class="hero-left">
             <div class="hero-kicker">
-                <span>The Linux audio dashboard</span>
+                <span>The audiophile streamer interface</span>
                 <span class="live">Live SSE</span>
             </div>
             <h1 class="hero-h1">Audiogravi<sup>ty</sup></h1>
-            <p class="hero-tag">Your audio chain, fully controlled. <em>Browser, phone, tablet — anywhere on your network.</em></p>
-            <p class="hero-lede">Your streamer runs MPD, Roon Bridge, HQPlayer NAA, upmpdcli, Shairport-Sync — sometimes
-                all at once, sometimes fighting for the same DAC. Audiogravity is the unified interface that
-                orchestrates all of it from any device on your local network. No SSH. No terminal. No cloud.</p>
+            <p class="hero-tag">Your streamer is your source. <em>Audiogravity is the conductor.</em></p>
+            <p class="hero-lede">MPD, Roon, HQPlayer, AirPlay, UPnP — every player, every source, down to DSD and
+                Hi-Res PCM. Audiogravity coordinates each component of your stack, from the RT kernel to your Qobuz
+                and Tidal libraries, without replacing any of them. One interface. Total control.</p>
             <div class="hero-cta">
                 <a class="cta-primary" href="#install">Start the 30-day trial →</a>
                 <a class="cta-ghost" href="#features">See features</a>
@@ -91,13 +91,13 @@
 
         <div class="hero-right">
             <div class="hero-carousel">
-                <img src="assets/pics/ag-services.webp"         alt="Services"    class="hero-screenshot active">
+                <img src="assets/pics/ag-player-black.webp"     alt="Player dark" class="hero-screenshot active">
+                <img src="assets/pics/ag-services.webp"         alt="Services"    class="hero-screenshot">
                 <img src="assets/pics/ag-player.webp"           alt="Player"      class="hero-screenshot">
                 <img src="assets/pics/ag-library.webp"          alt="Library"     class="hero-screenshot">
                 <img src="assets/pics/ag-profiles.webp"         alt="Profiles"    class="hero-screenshot">
                 <img src="assets/pics/ag-settings.webp"         alt="Settings"    class="hero-screenshot">
                 <img src="assets/pics/ag-performence-black.webp" alt="Performance" class="hero-screenshot">
-                <img src="assets/pics/ag-player-black.webp"     alt="Player dark" class="hero-screenshot">
                 <img src="assets/pics/ag-profiles-back.webp"    alt="Profiles dark" class="hero-screenshot">
             </div>
             <div class="hero-dots">
@@ -109,6 +109,23 @@
                 <span class="dot"></span>
                 <span class="dot"></span>
                 <span class="dot"></span>
+            </div>
+            <div class="hero-controls">
+                <button class="hero-ctrl" id="heroPrev" aria-label="Previous">
+                    <svg viewBox="0 0 24 24"><polyline points="15,18 9,12 15,6"/></svg>
+                </button>
+                <button class="hero-ctrl" id="heroPlay" aria-label="Pause">
+                    <svg class="ic-pause" viewBox="0 0 24 24">
+                        <rect x="6" y="4" width="4" height="16"/>
+                        <rect x="14" y="4" width="4" height="16"/>
+                    </svg>
+                    <svg class="ic-play" viewBox="0 0 24 24">
+                        <polygon points="5,3 19,12 5,21"/>
+                    </svg>
+                </button>
+                <button class="hero-ctrl" id="heroNext" aria-label="Next">
+                    <svg viewBox="0 0 24 24"><polyline points="9,18 15,12 9,6"/></svg>
+                </button>
             </div>
         </div>
     </section>
@@ -793,8 +810,7 @@
             <div class="footer-top">
                 <div class="footer-brand">
                     <div class="logo">Audiogravi<sup>ty</sup></div>
-                    <div class="tagline">Professional dashboard for demanding audiophiles on Linux. Bit-perfect.
-                        Self-hosted. Yours.</div>
+                    <div class="tagline">The conductor of your streamer. Every player, every source, total control.</div>
                     <div class="version">v1.0 · Proprietary license</div>
                 </div>
                 <div class="footer-col">
