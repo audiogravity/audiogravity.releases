@@ -21,8 +21,12 @@ One command on your streamer — core and interface together:
 curl -fsSL https://audiogravity.app/install.sh | sudo bash
 ```
 
-Then open `https://<ip-of-your-streamer>` in any browser on your network. Your 30-day
-trial starts by itself. Full walkthrough: [2. Installation](https://audiogravity.app/docs/manual/02-installation).
+It needs Debian 13 (Trixie) or later — DietPi and Raspberry Pi OS included, in their Trixie
+release — on x86-64 or aarch64.
+
+Then open the address the installer prints — `https://<name>.local`, or the box's IP — in any
+browser on your network. Your 30-day trial starts by itself. Full walkthrough:
+[2. Installation](https://audiogravity.app/docs/manual/02-installation).
 
 To install the two parts on different hosts, run each installer on its own host:
 
@@ -38,8 +42,8 @@ curl -fsSL https://audiogravity.app/install-ui.sh   | sudo bash   # the interfac
 | `audiogravity-core-<version>-x86_64.tar.gz` | The core — Debian / DietPi on x86-64 |
 | `audiogravity-core-<version>-aarch64.tar.gz` | The core — Raspberry Pi and other aarch64 boards |
 | `audiogravity-ui-<version>.tar.gz` | The interface — architecture-independent |
-| `install-core.sh`, `install-ui.sh` | The installers the one-line command above downloads |
-| `SHA256SUMS` | Checksum of every file in the release |
+| `install-core.sh`, `install-ui.sh` | The installers — the same ones audiogravity.app serves, which the one-line command above runs |
+| `SHA256SUMS` | Checksum of each of the three tarballs |
 
 The core is a compiled binary; the interface is a static web build. Both are installed
 as systemd-managed services by the installers — no compilation, no dependencies to
@@ -53,11 +57,14 @@ recent release:
 ```bash
 BASE=https://github.com/audiogravity/audiogravity.releases/releases/latest/download
 curl -fLO $BASE/SHA256SUMS
-curl -fLO $BASE/audiogravity-ui-*.tar.gz          # or the core tarball for your arch
+curl -fLO "$BASE/$(grep -o 'audiogravity-ui-[^ ]*\.tar\.gz' SHA256SUMS)"
+# or the core for this machine:
+# curl -fLO "$BASE/$(grep -o "audiogravity-core-[^ ]*-$(uname -m)\.tar\.gz" SHA256SUMS)"
 sha256sum --check --ignore-missing SHA256SUMS
 ```
 
-`--ignore-missing` lets you check one file without downloading the whole release.
+The file names are read from `SHA256SUMS`, since they carry the version. `--ignore-missing`
+lets you check one file without downloading the whole release.
 
 ## Updating
 
@@ -76,7 +83,7 @@ Editions and what each one unlocks: [EDITIONS.md](https://github.com/audiogravit
 
 ## Contributing
 
-Releases are built and published by the project's release tooling; nothing in this
-repository is edited by hand, so a pull request opened here cannot be merged. Open an
+Releases are built and published by the project's release tooling, so a pull request
+opened here cannot be merged. Open an
 issue on [audiogravity.site](https://github.com/audiogravity/audiogravity.site/issues)
 instead — that is where bug reports, questions and feature requests are tracked.
